@@ -1,0 +1,100 @@
+﻿@model NovaFormatos.Shared.Data.tblprospectos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class=" col-md-12">
+    <div class="card" id="detalles">
+        <div class="card-header">
+            <h5></h5>
+        </div>
+        <div class=" card-body text-center text-danger">
+            <dl class="row">
+@*                 <dt class=" col-sm-6">
+                    Nombre
+                </dt> *@
+                <dd class="col-sm-12 text-dark">
+                    <p>
+                    ANEXO II
+                    <br />
+                    AUTORIZACIÓN PARA SOLICITAR REPORTES DE CRÉDITO
+                        <br />
+                    PERSONAS FÍSICAS / PERSONAS MORALES
+                        <br />
+                        <br />
+                        CONTRATO DE APERTURA DE CRÉDITO SIMPLE<br />
+                        CON GARANTIA HIPOTECARIA Y/O PRENDARIA Y/O PERSONAL<br />
+                        (PERSONA FÍSICA TASA FIJA)<br />
+                    </p>
+                    <p class="text-start">
+                        Por este conducto autorizo expresamente a UNIÓN DE CRÉDITO ESTATAL DE PRODUCTORES DE CAFÉ DE OAXACA, S.A. DE C.V., para que por conducto de sus funcionarios facultados lleve a cabo Investigaciones, sobre mi comportamiento crediticio o el de la Empresa que represento en Trans Union de México, S.A. SIC y/o Dun & Bradstreet, S.A. SIC.
+                    </p>
+                    <p class="text-start">
+                        Así mismo, declaro que conozco la naturaleza y alcance de la información que se solicitará, del uso que UNIÓN DE CRÉDITO ESTATAL DE PRODUCTORES DE CAFÉ DE OAXACA, S.A. DE C.V., hará de tal información y de que ésta podrá realizar consultas periódicas sobre mi historial o el de la  empresa que represento, consintiendo que esta autorización se encuentre vigente por un periodo de 3 años contados a partir de su expedición y en todo caso durante el tiempo que se mantenga la relación jurídica.
+                    </p>
+                    <p class="text-start">
+                        En caso de que la solicitante sea una Persona Moral, declaro bajo protesta de decir verdad ser Representante Legal de la empresa mencionada en esta autorización; manifestando que a la fecha de firma de la presente autorización los poderes no me han sido revocados, limitados, ni modificados en forma alguna.
+                    </p>
+                    <p class="text-start">
+                        Autorización para:
+                    </p>
+                    <p class="text-start">
+                        Persona Física (PF) _____       Persona Física con Actividad Empresarial (PFAE) _____         Persona Moral (PM) _____
+                    </p>
+                    <p class="text-start">
+                        Nombre del solicitante (Persona Física o Razón Social de la Persona Moral):
+                        <br />
+                        @Html.DisplayFor(model => model.cia)
+                        @Html.DisplayFor(model => model.nombre1)
+                        @Html.DisplayFor(model => model.nombre2)
+                        @Html.DisplayFor(model => model.apellidop)
+                        @Html.DisplayFor(model => model.apellidom)
+                    </p>
+                    <p class="text-start">
+                        Para el caso de Persona Moral, nombre del Representante Legal:
+                    </p>
+                    <p class="text-start">
+                        RFC: @Html.DisplayFor(model => model.rfc)
+                    </p>
+                    <p class="text-start">
+                        Domicilio: @Html.DisplayFor(model => model.direccion1)
+                        @* Colonia: @Html.DisplayFor(model => model.colonia) *@
+                    </p>
+                    <p class="text-start">
+                        Municipio:
+                    </p>
+                    <p class="text-start">
+                        Teléfono(s): @Html.DisplayFor(model => model.telefono)
+                    </p>
+                    <p class="text-start">
+                        Fecha en que se firma la autorización:
+                    </p>
+                    <p class="text-start">
+                        Estoy consciente y acepto que este documento quede bajo propiedad de UNIÓN DE CRÉDITO ESTATAL DE PRODUCTORES DE CAFÉ DE OAXACA, S.A. DE C.V. y/o Sociedad de Información Crediticia consultada para efectos de control y cumplimiento del artículo 28 de la Ley para Regular las Sociedades de Información Crediticia; mismo que señala que las Sociedades sólo podrán proporcionar información a un Usuario, cuando éste cuente con la autorización expresa del Cliente mediante su firma autógrafa.
+                    </p>
+                    <p class="text-start">
+                        Firma de PF, PFAE o Representante Legal de la empresa
+                    </p>
+                    <p class="bg-danger p-2 text-dark bg-opacity-10 border text-start ">
+                        Para uso exclusivo de la Empresa que efectúa la consulta UNIÓN DE CRÉDITO ESTATAL DE PRODUCTORES DE CAFÉ DE OAXACA, S.A. DE C.V.
+                        <br />
+                        Fecha de consulta BC: ___________________________________
+                        <br />
+                        Folio de Consulta BC: ___________________________________
+                    </p>
+                    <p class="text-start">
+                        IMPORTANTE: Este formato debe ser llenado individualmente, para una persona física ó para una sola empresa. En caso de requerir el Historial crediticio del representante legal, favor de llenar un formato adicional.
+                    </p>
+                </dd>
+
+            </dl>
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-sm btn-primary mb-2" data-bs-dismiss="modal"><i class=" oi oi-ban"></i>Volver</button>
+            <a asp-controller="Prospectos" asp-action="GenerarPdf" asp-route-id="@Model.id"
+               class="btn btn-sm btn-info text-white mb-2">Generar Pdf</a>
+        </div>
+    </div>
+</div>
+
